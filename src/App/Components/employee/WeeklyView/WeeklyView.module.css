@@ -1,0 +1,64 @@
+.weeklyView {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  border: 2px solid silver; /* Add silver border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+  padding: 3% 2%;
+  margin: 0 1%;
+  height: 100%;
+}
+
+.tableHeader {
+  text-align: center;
+}
+
+.hoursTable {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.hoursTable th,
+.hoursTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  width: 90px;
+}
+
+.hoursTable th {
+  background-color: #f2f2f2;
+}
+
+.hoursTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+@media screen and (min-width: 321px) and (max-width: 1360px) {
+  .hoursTable th,
+  .hoursTable td {
+    width: 100px;
+  }
+
+  .weeklyView {
+    flex-flow: column;
+    margin: 0 2%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .hoursTable th,
+  .hoursTable td {
+    width: 56px;
+  }
+
+  .weeklyView {
+    flex-flow: column;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none;
+    box-shadow: none;
+  }
+}

@@ -1,17 +1,60 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+import "./index.css";
+import App from "./App/App";
+import { Provider } from "react-redux";
+import store from "./libs/redux/store";
+import Dashboard from "./App/Pages/Dashboard/Dashboard";
+import Logout from "./App/Pages/Logout/Logout";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+function isAuthenticated() {
+  const userJSON = localStorage.getItem("user");
+  return userJSON ? true : false;
+}
+
+function ProtectedRoute({ element, ...rest }) {
+  return isAuthenticated() ? element : <Navigate to="/" replace />;
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Provider store={store}>
+              <App />
+            </Provider>
+          }
+        />
+
+        <Route
+          path="/logout"
+          element={
+            <Provider store={store}>
+              <Logout />
+            </Provider>
+          }
+        />
+
+        <Route
+          path="/dashboard"
+          element={
+            <Provider store={store}>
+              <ProtectedRoute element={<Dashboard />} />
+            </Provider>
+          }
+        />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

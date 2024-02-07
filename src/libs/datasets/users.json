@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "username": "ejohnson",
+    "password": "tQr6FjKp2W8e",
+    "type": "employee"
+  },
+  {
+    "id": 2,
+    "username": "nwilliams",
+    "password": "vLz9BwDc7M1n",
+    "type": "employee"
+  },
+  {
+    "id": 3,
+    "username": "obrown",
+    "password": "yXg3NhFw6U5b",
+    "type": "employee"
+  },
+  {
+    "id": 4,
+    "username": "ljones",
+    "password": "pC2GtDk3J7lW",
+    "type": "employee"
+  },
+  {
+    "id": 5,
+    "username": "amiller",
+    "password": "qW6HgJ9R4Z8m",
+    "type": "employee"
+  },
+  {
+    "id": 6,
+    "username": "sdavis",
+    "password": "bF8XnZ3Mk1Vp",
+    "type": "employee"
+  },
+  {
+    "id": 7,
+    "username": "wgarcia",
+    "password": "kY2QcV9P5R3w",
+    "type": "employee"
+  },
+  {
+    "id": 8,
+    "username": "irodriguez",
+    "password": "dS7VbT1K6N9m",
+    "type": "employee"
+  },
+  {
+    "id": 9,
+    "username": "jmartinez",
+    "password": "nU4YhJ7K2L3M",
+    "type": "employee"
+  },
+  {
+    "id": 10,
+    "username": "chernandez",
+    "password": "rT2FwD9S6N1H",
+    "type": "employee"
+  },
+  {
+    "id": 11,
+    "username": "blopez",
+    "password": "vW5MxZ8C1G9J",
+    "type": "employee"
+  },
+  {
+    "id": 12,
+    "username": "mgonzalez",
+    "password": "pJ6VcT9B2N7M",
+    "type": "employee"
+  },
+  {
+    "id": 13,
+    "username": "wwilson",
+    "password": "zQ8VcT1K6L3M",
+    "type": "employee"
+  },
+  {
+    "id": 14,
+    "username": "aanderson",
+    "password": "rW6VxT2B8K3N",
+    "type": "employee"
+  },
+  {
+    "id": 15,
+    "username": "ltaylor",
+    "password": "nX4GtD7J2L9M",
+    "type": "employee"
+  },
+  {
+    "id": 16,
+    "username": "manager",
+    "password": "",
+    "type": "manager"
+  },
+  {
+    "id": 17,
+    "username": "employee",
+    "password": "",
+    "type": "employee"
+  },
+  {
+    "id": 18,
+    "username": "jmorgan",
+    "password": "",
+    "type": "manager"
+  },
+  {
+    "id": 19,
+    "username": "wmorgan",
+    "password": "",
+    "type": "manager"
+  },
+  {
+    "id": 20,
+    "username": "rstull",
+    "password": "",
+    "type": "employee"
+  }
+]

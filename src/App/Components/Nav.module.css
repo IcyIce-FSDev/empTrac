@@ -1,0 +1,59 @@
+.navCon {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.hamburger {
+  display: none; /* Hide hamburger on wider screens */
+  cursor: pointer;
+  position: relative;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+.isMenuOpen .bar:first-child {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.isMenuOpen .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.isMenuOpen .bar:last-child {
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+.links {
+  text-decoration: none;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 660px) {
+  .navCon {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .isOpen {
+    display: flex !important;
+    position: absolute;
+    right: 0px;
+    background-color: rgb(75, 75, 75);
+    width: 100vw;
+    padding: 2% 3%;
+  }
+}

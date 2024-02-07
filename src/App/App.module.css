@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure overlay is on top of everything */
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #ffffff;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+.title {
+  font-family: "Bebas Neue", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow for the text */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow for the box */
+  border-radius: 20px; /* Adjust the value to make the shadow oval */
+  padding: 1rem;
+  animation: pulse 2s infinite alternate; /* Apply the pulsing animation */
+  letter-spacing: 0.2em;
+  background-color: whitesmoke;
+}
+
+.form {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+.inputbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+
+.labels {
+  width: 275px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  background-color: white;
+  border: 2px black solid;
+  border-radius: 50px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.error {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0px; /* Adjust as needed */
+  width: 265px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Original shadow */
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Larger shadow for pulse */
+  }
+}
